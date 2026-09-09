@@ -1,7 +1,7 @@
 # SurveyAgent-HKA: A Multi-Agent Framework for Scientific Survey Generation with LLMs and Human Knowledge Augmentation
 
 <p align="center">
-  <img src="./code-for-SurveyAgent-HKA/src/surveyagent.png" alt="Overview of the SurveyAgent-HKA framework" width="100%">
+  <img src="./code_for_SurveyAgent-HKA/src/surveyagent.png" alt="Overview of the SurveyAgent-HKA framework" width="100%">
 </p>
 
 This is the official repository for the code of the paper: ["SurveyAgent-HKA: A Multi-Agent Framework for Scientific Survey Generation with LLMs and Human Knowledge Augmentation"](https://arxiv.org/abs/2508.17647), *accepted at **Knowledge-Based Systems***.
