@@ -54,13 +54,15 @@ SurveyAgent-HKA/
 ## Code for SurveyAgent-HKA
 **Before start:**
 
-1. Apply for the [Semantic Scholar API](https://www.semanticscholar.org/product/api), [OpenAlex API](https://docs.openalex.org/how-to-use-the-api/api-overview), and an OpenAI-compatible GPT API.
+1. Apply for the [Semantic Scholar API](https://www.semanticscholar.org/product/api), [OpenAlex API](https://docs.openalex.org/how-to-use-the-api/api-overview), and an [OpenAI-API](https://openai.com/zh-Hans-CN/api/).
 
 2. Download `Surveys_Full_Text.jsonl` from [SurveyGen](https://github.com/tongbao96/SurveyGen) and place it next to `config.json`.
 
 3. Download `database.zip` from [AutoSurvey](https://github.com/AutoSurveys/AutoSurvey) and place it next to `config.json`.
 
-4. Configure all required API keys and related parameters in `config.json`.
+4. Install [MinerU](https://github.com/opendatalab/MinerU) locally following its official installation instructions.
+
+5. Configure all required API keys and related parameters in `config.json`.
 
 **Quick start:**
 
@@ -144,6 +146,21 @@ All intermediate results, checkpoints, and generated surveys are saved under the
 ```
 
 The final generated survey is saved as `artifacts/final_survey.md`.
+
+
+## Requirements
+
+- `numpy==2.4.6`
+- `openai==2.54.0`
+- `requests==2.34.2`
+- `sentence-transformers==5.7.0`
+- `pypdf==6.17.0`
+- `mineru[pipeline]==3.4.5`
+- `six==1.17.0`
+- `faiss-cpu==1.15.0`
+- `ijson>=3.3.0`
+- `zipfile64==0.1.0`
+- `einops>=0.8.0`
 
 ## Acknowledgements
 
