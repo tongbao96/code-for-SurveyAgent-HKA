@@ -1,0 +1,11 @@
+numpy==2.4.6
+openai==2.54.0
+requests==2.34.2
+sentence-transformers==5.7.0
+pypdf==6.17.0
+mineru[pipeline]==3.4.5
+six==1.17.0
+faiss-cpu==1.15.0
+ijson>=3.3.0
+zipfile64==0.1.0
+einops>=0.8.0

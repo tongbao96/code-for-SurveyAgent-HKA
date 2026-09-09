@@ -1,0 +1,89 @@
+{
+  "topic": {
+    "title": "Deep Learning Applications in Computer Vision",
+    "year_end": 2020,
+    "keywords": [
+      "Deep Learning",
+      "Computer Vision",
+      "Applications"
+    ],
+    "domain": "computer_science"
+  },
+  "workspace": "runs/deep-learning-cv",
+  "model": {
+    "model": "gpt-4o-mini",
+    "polish_model": "gpt-5.6-luna",
+    "polish_context_tokens": 1050000,
+    "api_mode": "chat_completions",
+    "base_url": "YOUR_OPENAI_URL",
+    "temperature": 0,
+    "max_retries": 4,
+    "max_concurrent_requests": 3,
+    "api_key": "YOUR_API_KEY"
+  },
+  "retrieval": {
+    "sources": [
+      "semantic_scholar",
+      "arxiv"
+    ],
+    "initial_total": 200,
+    "semantic_scholar_initial": 150,
+    "supplementary_initial": 50,
+    "section_results": 60,
+    "co_cited_results": 20,
+    "final_per_section": 50,
+    "query_expansions": 2,
+    "semantic_scholar_api_key": "YOUR_API_KEY",
+    "openalex_api_key": "YOUR_API_KEY",
+    "openalex_mailto": "YOUR_EMAIL",
+    "pubmed_api_key": "YOUR_API_KEY",
+    "check_semantic_scholar_api": true,
+    "arxiv_request_interval_seconds": 3.1,
+    "arxiv_max_retries": 4,
+    "use_arxiv_api": false,
+    "openalex_title_match": true,
+    "openalex_title_match_candidates": 5,
+    "openalex_title_match_year_tolerance": 2,
+    "openalex_title_match_cache": ".cache/openalex_title_matches.sqlite3",
+    "openalex_enrichment_required": false,
+    "arxiv_database_path": "database.zip",
+    "arxiv_database_cache": ".cache/autosurvey_arxiv",
+    "arxiv_database_embedding_model": "nomic-ai/nomic-embed-text-v1",
+    "arxiv_database_device": "auto",
+    "arxiv_database_faiss_device": "cpu",
+    "arxiv_database_overfetch_factor": 5,
+    "arxiv_database_trust_remote_code": true
+  },
+  "ranking": {
+    "citation_weight": 0.5,
+    "author_weight": 0.2,
+    "venue_weight": 0.3
+  },
+  "embedding_model": "BAAI/bge-large-en-v1.5",
+  "embedding_device": "auto",
+  "require_embedding_model": true,
+  "clusters": 6,
+  "cluster_min_size": 5,
+  "related_human_outlines": 10,
+  "related_review_surveys": 20,
+  "max_revision_rounds": 3,
+  "human_outlines_path": "Surveys_Full_Text.jsonl",
+  "peer_reviews_paths": [
+    "../Peer_review_comments/cs/EMNLP.jsonl",
+    "../Peer_review_comments/cs/ICLR.jsonl",
+    "../Peer_review_comments/cs/F1000.json"
+  ],
+  "mineru_command": ["mineru", "-p", "{input}", "-o", "{output_dir}", "-b", "pipeline"],
+  "require_mineru": true,
+  "download_pdfs": false,
+  "max_full_text_papers": 2,
+  "parallel_enabled": true,
+  "retrieval_workers": 2,
+  "cluster_workers": 3,
+  "section_workers": 2,
+  "review_retrieval_workers": 2,
+  "extraction_workers": 1,
+  "max_workers": 4,
+  "polish_workers": 2,
+  "writer_max_attempts": 4
+}

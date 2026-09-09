@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surveyagent-hka"
+version = "0.1.0"
+description = "Reference implementation of SurveyAgent-HKA"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "openai>=1.68",
+  "requests>=2.31",
+]
+
+[project.optional-dependencies]
+ml = ["sentence-transformers>=2.2"]
+pdf = ["pypdf>=4.0"]
+local_arxiv = [
+  "faiss-cpu>=1.15.0",
+  "ijson>=3.3.0",
+  "zipfile64>=0.1.0",
+  "einops>=0.8.0",
+]
+paper = [
+  "sentence-transformers>=2.2",
+  "pypdf>=4.0",
+  "mineru[pipeline]>=3.4.0",
+  # MinerU 3.4.5 imports this in its pipeline OCR backend but does not
+  # currently declare it in the installed dependency set.
+  "six>=1.17",
+]
+all = [
+  "sentence-transformers>=2.2",
+  "pypdf>=4.0",
+  "mineru[pipeline]>=3.4.0",
+  "six>=1.17",
+  "faiss-cpu>=1.15.0",
+  "ijson>=3.3.0",
+  "zipfile64>=0.1.0",
+  "einops>=0.8.0",
+]
+
+[project.scripts]
+surveyagent-hka = "surveyagent_hka.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

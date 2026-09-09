@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.cache/
+database.zip
+Surveys_Full_Text.jsonl
+runs/
+build/
+dist/
+*.egg-info/
