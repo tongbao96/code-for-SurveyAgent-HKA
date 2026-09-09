@@ -8,7 +8,7 @@ This is the official repository for the code of the paper: ["SurveyAgent-HKA: A 
 
 ## Overview
 
-* We propose SurveyAgent-HKA, a multi-agent framework that integrates human Knowledge foe end-to-end scientific survey generation.
+* We propose SurveyAgent-HKA, a multi-agent framework that integrates human knowledge for end-to-end scientific survey generation.
 
 * We designed a unified literature retrieval pipeline, which not only helps retrieve relevant literature from multiple sources but also selects representative papers through advanced citation network analysis and a re-ranking module, ensuring the coverage and reliability of the references for generating well-grounded scientific surveys.
 
